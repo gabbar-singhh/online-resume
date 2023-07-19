@@ -20,9 +20,7 @@ export default function Home() {
             alt="developer's picture"
           />
         </div>
-        <div className={styles.SelfPromo}>
-          17 y/o — Self Taught Web Developer and Designer 👨‍💻
-        </div>
+        <div className={styles.SelfPromo}>Website in Progress ⚒</div>
         <div className={styles.Button}>
           <div
             className={styles.TwitterBtn}
