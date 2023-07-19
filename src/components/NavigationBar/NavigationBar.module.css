@@ -1,0 +1,26 @@
+.Nav {
+  background-color: var(--light-black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5em;
+}
+
+/* LEFTSIDE NAVIGATION BAR */
+.Leftside_Nav {
+  cursor: default;
+}
+
+
+/* RIGHTSIDE NAVIGATION BAR */
+.Rightside_Nav .button {
+  background-color: var(--blue);
+}
+
+.Rightside_Nav .button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}

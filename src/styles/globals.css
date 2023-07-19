@@ -1,3 +1,9 @@
+:root {
+  --blue: #2f78e6;
+  --light-black: #232323;
+  --white: #fff;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
