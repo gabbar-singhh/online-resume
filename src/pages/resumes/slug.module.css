@@ -1,0 +1,18 @@
+.Main {}
+
+
+.Editor_Container {
+    cursor: default;
+    margin: 3em 2em;
+}
+
+.Editor_Container p {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #232323;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Editor {
+    width: 90%;
+}

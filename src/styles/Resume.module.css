@@ -1,0 +1,17 @@
+.Main {
+    width: 70%;
+    margin: 3em auto;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header p {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #232323;
+}

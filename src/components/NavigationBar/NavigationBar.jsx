@@ -49,10 +49,14 @@ const NavigationBar = () => {
                     {/* IF USER IS AUTHENTICATED USING GOOGLE  */}
                     {CheckAuthService(user.sub) === "GOOGLE" && (
                       <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
-                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                        <Text
+                          css={{ d: "flex", fontSize: "14px", fontWeight: 500 }}
+                        >
                           Signed in as
                         </Text>
-                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                        <Text
+                          css={{ d: "flex", fontSize: "14px", fontWeight: 500 }}
+                        >
                           {user.email}
                         </Text>
                       </Dropdown.Item>
@@ -61,11 +65,10 @@ const NavigationBar = () => {
                     {/* IF USER IS AUTHENTICATED USING LINKEDIN  */}
                     {CheckAuthService(user.sub) === "LINKEDIN" && (
                       <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
-                        <Text css={{ d: "flex", fontWeight: 600 }}>
-                          You are signed in from you
-                        </Text>
-                        <Text css={{ d: "flex", fontWeight: 600 }}>
-                          LinkedIn Account
+                        <Text
+                          css={{ d: "flex", fontSize: "14px", fontWeight: 500 }}
+                        >
+                          You are signed in from your LinkedIn Account
                         </Text>
                       </Dropdown.Item>
                     )}
@@ -73,11 +76,10 @@ const NavigationBar = () => {
                     {/* IF USER IS AUTHENTICATED USING GITHUB  */}
                     {CheckAuthService(user.sub) === "GITHUB" && (
                       <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
-                        <Text css={{ d: "flex", fontWeight: 600 }}>
-                          You are signed in from your
-                        </Text>
-                        <Text css={{ d: "flex", fontWeight: 600 }}>
-                          Github Account
+                        <Text
+                          css={{ d: "flex", fontSize: "14px", fontWeight: 500 }}
+                        >
+                          You are signed in from your Github Account
                         </Text>
                       </Dropdown.Item>
                     )}
@@ -85,7 +87,9 @@ const NavigationBar = () => {
                     {/* IF SOME ERRORS OCCURS, IT WILL RETURN 'DEFAULT'  */}
                     {CheckAuthService(user.sub) === "DEFAULT" && (
                       <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
-                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                        <Text
+                          css={{ d: "flex", fontSize: "14px", fontWeight: 500 }}
+                        >
                           You are Signed In
                         </Text>
                       </Dropdown.Item>
@@ -94,7 +98,7 @@ const NavigationBar = () => {
                     <Dropdown.Item
                       key="logout"
                       color="error"
-                      css={{ fontWeight: 600 }}
+                      css={{ fontSize: "14px", fontWeight: 500 }}
                     >
                       Log Out
                     </Dropdown.Item>
