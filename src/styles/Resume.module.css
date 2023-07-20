@@ -1,6 +1,10 @@
 .Main {
     width: 70%;
-    margin: 3em auto;
+    margin: 0 auto;
+}
+
+.Main div {
+    text-align: center;
 }
 
 .Header {

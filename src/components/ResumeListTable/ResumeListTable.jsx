@@ -95,24 +95,133 @@ const ResumeListTable = () => {
       selectionMode="none"
     >
       <Table.Header columns={columns}>
-        {(column) => (
-          <Table.Column
-            key={column.uid}
-            hideHeader={column.uid === "actions"}
-            align={column.uid === "actions" ? "center" : "start"}
-          >
-            {column.name}
-          </Table.Column>
-        )}
+        <Table.Column
+          key={1}
+          hideHeader={columns.uid === "actions"}
+          align={columns.uid === "actions" ? "center" : "start"}
+        >
+          Name
+        </Table.Column>
+        <Table.Column
+          key={2}
+          hideHeader={columns.uid === "actions"}
+          align={columns.uid === "actions" ? "center" : "start"}
+        >
+          Date Modified
+        </Table.Column>
+        <Table.Column
+          key={3}
+          hideHeader={columns.uid === "actions"}
+          align={columns.uid === "actions" ? "center" : "start"}
+        >
+          Action
+        </Table.Column>
       </Table.Header>
       <Table.Body items={users}>
-        {(item) => (
-          <Table.Row>
-            {(columnKey) => (
-              <Table.Cell>{renderCell(item, columnKey)}</Table.Cell>
-            )}
-          </Table.Row>
-        )}
+        <Table.Row>
+          <Table.Cell>Sample Resume</Table.Cell>
+          <Table.Cell>20 Jul 2023, 04:20 PM</Table.Cell>
+          <Table.Cell>
+            {" "}
+            <Row justify="center" align="center">
+              <Col css={{ d: "flex" }}>
+                <Tooltip content="Details">
+                  <IconButton onClick={() => console.log("View user", user.id)}>
+                    <EyeIcon size={20} fill="#979797" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+              <Col css={{ d: "flex" }}>
+                <Tooltip content="Edit user">
+                  <IconButton onClick={() => console.log("Edit user", user.id)}>
+                    <EditIcon size={20} fill="#979797" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+              <Col css={{ d: "flex" }}>
+                <Tooltip
+                  content="Delete user"
+                  color="error"
+                  onClick={() => console.log("Delete user", user.id)}
+                >
+                  <IconButton>
+                    <DeleteIcon size={20} fill="#FF0080" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+            </Row>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row>
+          <Table.Cell>Hipla</Table.Cell>
+          <Table.Cell>20 Feb 2023, 12:20 PM</Table.Cell>
+          <Table.Cell>
+            {" "}
+            <Row justify="center" align="center">
+              <Col css={{ d: "flex" }}>
+                <Tooltip content="Details">
+                  <IconButton onClick={() => console.log("View user", user.id)}>
+                    <EyeIcon size={20} fill="#979797" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+              <Col css={{ d: "flex" }}>
+                <Tooltip content="Edit user">
+                  <IconButton onClick={() => console.log("Edit user", user.id)}>
+                    <EditIcon size={20} fill="#979797" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+              <Col css={{ d: "flex" }}>
+                <Tooltip
+                  content="Delete user"
+                  color="error"
+                  onClick={() => console.log("Delete user", user.id)}
+                >
+                  <IconButton>
+                    <DeleteIcon size={20} fill="#FF0080" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+            </Row>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row>
+          <Table.Cell>Google internship</Table.Cell>
+          <Table.Cell>07 Dec 2023, 6:20 AM</Table.Cell>
+          <Table.Cell>
+            {" "}
+            <Row justify="center" align="center">
+              <Col css={{ d: "flex" }}>
+                <Tooltip content="Details">
+                  <IconButton onClick={() => console.log("View user", user.id)}>
+                    <EyeIcon size={20} fill="#979797" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+              <Col css={{ d: "flex" }}>
+                <Tooltip content="Edit user">
+                  <IconButton onClick={() => console.log("Edit user", user.id)}>
+                    <EditIcon size={20} fill="#979797" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+              <Col css={{ d: "flex" }}>
+                <Tooltip
+                  content="Delete user"
+                  color="error"
+                  onClick={() => console.log("Delete user", user.id)}
+                >
+                  <IconButton>
+                    <DeleteIcon size={20} fill="#FF0080" />
+                  </IconButton>
+                </Tooltip>
+              </Col>
+            </Row>
+          </Table.Cell>
+        </Table.Row>
       </Table.Body>
     </Table>
   );

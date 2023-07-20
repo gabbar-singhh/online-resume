@@ -16,6 +16,9 @@ const resumes = () => {
         <title>OnlineResumes.in | {username}</title>
       </Head>
       <section className={styles.Main}>
+        <div>
+          <img src="/ill.png" height={350}/>
+        </div>
         <div className={styles.Header}>
           <p>Your Resumes</p>
           <Button auto bordered size={"md"}>

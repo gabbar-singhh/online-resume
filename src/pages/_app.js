@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
+import Footer from "@/components/Footer/Footer";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }) {
       <UserProvider>
         <NavigationBar />
         <Component {...pageProps} />
+        <Footer />
       </UserProvider>
     </>
   );

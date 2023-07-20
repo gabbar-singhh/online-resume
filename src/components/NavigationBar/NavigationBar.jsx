@@ -18,7 +18,7 @@ const NavigationBar = () => {
 
   return (
     <nav className={styles.Nav}>
-      <div className={styles.Leftside_Nav}>Lorem ipsum dolor sit.</div>
+      <div className={styles.Leftside_Nav}>OnlineResumes.in</div>
 
       <div className={styles.Rightside_Nav}>
         <Button className={styles.button} size={"sm"}>
