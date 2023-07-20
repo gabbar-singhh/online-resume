@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.webp" />
       </Head>
       <UserProvider>
+        <NavigationBar />
         <Component {...pageProps} />
       </UserProvider>
     </>

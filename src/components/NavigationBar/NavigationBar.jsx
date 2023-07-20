@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button, Loading, Dropdown, User, Text } from "@nextui-org/react";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import CheckAuthService from "@/utils/CheckAuthService";
 
 const NavigationBar = () => {
   const { user, isLoading } = useUser();
@@ -25,6 +26,7 @@ const NavigationBar = () => {
             <Loading color="currentColor" type="points-opacity" size="sm" />
           ) : (
             <>
+              {/* IF USER IS AUTHENTICATED ✅ */}
               {user ? (
                 <Dropdown placement="bottom">
                   <Dropdown.Trigger>
@@ -44,13 +46,47 @@ const NavigationBar = () => {
                     color="default"
                     aria-label="User Actions"
                   >
-                    {user.email && (
+                    {/* IF USER IS AUTHENTICATED USING GOOGLE  */}
+                    {CheckAuthService(user.sub) === "GOOGLE" && (
                       <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
                         <Text css={{ d: "flex", fontWeight: 600 }}>
                           Signed in as
                         </Text>
                         <Text css={{ d: "flex", fontWeight: 600 }}>
                           {user.email}
+                        </Text>
+                      </Dropdown.Item>
+                    )}
+
+                    {/* IF USER IS AUTHENTICATED USING LINKEDIN  */}
+                    {CheckAuthService(user.sub) === "LINKEDIN" && (
+                      <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
+                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                          You are signed in from you
+                        </Text>
+                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                          LinkedIn Account
+                        </Text>
+                      </Dropdown.Item>
+                    )}
+
+                    {/* IF USER IS AUTHENTICATED USING GITHUB  */}
+                    {CheckAuthService(user.sub) === "GITHUB" && (
+                      <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
+                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                          You are signed in from your
+                        </Text>
+                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                          Github Account
+                        </Text>
+                      </Dropdown.Item>
+                    )}
+
+                    {/* IF SOME ERRORS OCCURS, IT WILL RETURN 'DEFAULT'  */}
+                    {CheckAuthService(user.sub) === "DEFAULT" && (
+                      <Dropdown.Item css={{ height: "$18", cursor: "default" }}>
+                        <Text css={{ d: "flex", fontWeight: 600 }}>
+                          You are Signed In
                         </Text>
                       </Dropdown.Item>
                     )}
