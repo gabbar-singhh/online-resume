@@ -21,10 +21,101 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+
+  background: linear-gradient(45deg, #fff 25%, #2f78e6 25%, #2f78e6 75%, #fff 75%),
+                  linear-gradient(45deg, #2f78e6 25%, #fff 25%, #fff 75%, #2f78e6 75%);
+      background-size: 20px 20px;
+  background-repeat: no-repeat;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* EFFECTS */
+.ShineEff {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ShineEff::after {
+  content: '';
+  z-index: -1;
+  background-color: hsl(0deg 0% 87.04%);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.5em;
+  transform: translate3d(-550%, 0, 0) rotate(35deg);
+  /* transform: translate3d(-200%, 0, 0) rotate(35deg); */
+}
+
+.ShineEff:hover::after {
+  transition: transform 0.4s ease-in-out;
+  transform: translate3d(550%, 0, 0) rotate(35deg);
+  /* transform: translate3d(200%, 0, 0) rotate(35deg); */
+}
+
+.BubbleEff {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+.BubbleEff::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #afafaf;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.BubbleEff:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+.BubbleEff:hover::before {
+  transform: translate3d(600%, -50%, 0) scale3d(15, 15, 15);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

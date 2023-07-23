@@ -13,10 +13,10 @@ const resumes = () => {
   return (
     <>
       <Head>
-        <title>OnlineResumes.in | {username}</title>
+        <title>OnlineResumes.in</title>
       </Head>
       <section className={styles.Main}>
-        <div>
+        {/* <div>
           <img src="/ill.png" height={350}/>
         </div>
         <div className={styles.Header}>
@@ -24,7 +24,7 @@ const resumes = () => {
           <Button auto bordered size={"md"}>
             create a new resume
           </Button>
-        </div>
+        </div> */}
         <ResumeListTable />
       </section>
     </>

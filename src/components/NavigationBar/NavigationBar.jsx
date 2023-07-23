@@ -18,7 +18,9 @@ const NavigationBar = () => {
 
   return (
     <nav className={styles.Nav}>
-      <div className={styles.Leftside_Nav}>OnlineResumes.in</div>
+      <div className={styles.Leftside_Nav}>
+        Create. Edit. Preview. Download - Your Resume
+      </div>
 
       <div className={styles.Rightside_Nav}>
         <Button className={styles.button} size={"sm"}>
@@ -60,7 +62,7 @@ const NavigationBar = () => {
                           {user.email}
                         </Text>
                       </Dropdown.Item>
-                    )}
+                    )} 
 
                     {/* IF USER IS AUTHENTICATED USING LINKEDIN  */}
                     {CheckAuthService(user.sub) === "LINKEDIN" && (

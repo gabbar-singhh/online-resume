@@ -1,16 +1,15 @@
 .Footer {
+    width: 100%;
     bottom: 0;
     display: inline-flex;
-    width: 100%;
-    gap: 4px;
     position: fixed;
     background-color: #232323;
     color: #fff;
-    text-align: center;
     align-items: center;
     justify-content: space-around;
-    padding: 0.3em 0;
     cursor: default;
+    padding: 0.4em 0;
+    z-index: 99;
 }
 
 .Footer p {
