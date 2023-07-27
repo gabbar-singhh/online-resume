@@ -1,21 +1,24 @@
 .Main {
     width: 70%;
-    margin: 0 auto;
-}
-
-.Main div {
-    text-align: center;
-}
-
-.Header {
+    margin: 2em auto;
     display: flex;
+    flex-direction: column;
+}
+
+.Main .Title {
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1em;
+
 }
 
-.Header p {
-    font-size: 1.3em;
-    text-transform: uppercase;
-    font-weight: 500;
+.Title p {
     color: #232323;
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
+
+.Title .CreateNew {}

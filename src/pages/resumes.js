@@ -12,19 +12,19 @@ const resumes = () => {
 
   return (
     <>
-      <Head>
-        <title>OnlineResumes.in</title>
-      </Head>
       <section className={styles.Main}>
-        {/* <div>
-          <img src="/ill.png" height={350}/>
-        </div>
-        <div className={styles.Header}>
+        <div className={styles.Title}>
           <p>Your Resumes</p>
-          <Button auto bordered size={"md"}>
-            create a new resume
+          <Button
+            className={styles.CreateNew}
+            auto
+            size={"md"}
+            css={{ color: "#ac51ff" }}
+          >
+            Create a new resume
           </Button>
-        </div> */}
+        </div>
+
         <ResumeListTable />
       </section>
     </>
