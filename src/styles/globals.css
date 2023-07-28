@@ -33,6 +33,9 @@ body {
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(2.5px);
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 a {

@@ -14,8 +14,6 @@ const Footer = () => {
 };
 
 const FOOTER = STYLED.footer`
-position: fixed;
-bottom:0;
 width: 100%;
 text-align:center;
 background-color: var(--light-black);

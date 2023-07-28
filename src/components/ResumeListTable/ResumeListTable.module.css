@@ -1,5 +1,16 @@
 .Main {
-    margin: 2em 0;
+    padding: 0;
 }
 
-.Container {}
+
+.Main .Title {
+    width: 100%;
+}
+
+.Title p {
+    color: #232323;
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}

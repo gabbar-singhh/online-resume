@@ -5,6 +5,9 @@ import ResumeCard from "../ResumeCard/ResumeCard";
 const ResumeListTable = () => {
   return (
     <section className={styles.Main}>
+      <div className={styles.Title}>
+        <p>Previously Created Resumes</p>
+      </div>
       <div className={styles.Container}>
         <ResumeCard
           title={"Sample Resume"}
