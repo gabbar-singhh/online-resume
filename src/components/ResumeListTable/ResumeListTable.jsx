@@ -9,7 +9,7 @@ const ResumeListTable = () => {
         <p>Previously Created Resumes</p>
       </div>
       <div className={styles.Container}>
-        <ResumeCard
+        {/* <ResumeCard
           title={"Sample Resume"}
           lastModified={"20 Jul 2023, 04:20 PM"}
           relativeDate={"2 hours ago"}
@@ -23,7 +23,7 @@ const ResumeListTable = () => {
           title={"Hipla-demo"}
           lastModified={"31 Aug 2023, 04:20 PM"}
           relativeDate={"1 month ago"}
-        />{" "}
+        />{" "} */}
         <ResumeCard
           title={"student resume 33"}
           lastModified={"25 Dec 2023, 05:22 PM"}

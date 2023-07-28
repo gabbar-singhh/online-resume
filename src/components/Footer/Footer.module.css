@@ -1,0 +1,27 @@
+.Footer {
+
+    text-align: center;
+    background-color: var(--light-black);
+    color: #fff;
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.4em 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.Footer p {
+    font-size: 0.8em;
+}
+
+.Footer div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}

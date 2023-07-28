@@ -23,9 +23,9 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <UserProvider>
-          <NavigationBar />
-          <Component {...pageProps} />
-          <Footer />
+        <NavigationBar />
+        <Component {...pageProps} />
+        <Footer />
       </UserProvider>
     </>
   );

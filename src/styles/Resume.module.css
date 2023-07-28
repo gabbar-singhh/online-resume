@@ -6,7 +6,8 @@
 
 .Main .CreateNewDiv {
     margin: 0 auto;
-    height: 20em;
+    margin-bottom: 5em;
+    height: 10em;
 
     display: flex;
     align-items: center;
