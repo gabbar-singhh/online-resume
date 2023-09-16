@@ -12,9 +12,14 @@ const resumes = () => {
     <>
       <section className={styles.Main}>
         <div className={styles.CreateNewDiv}>
-          <button role="button" className={styles.CreateNewBtn}>
+          <span
+            onClick={() => {
+              console.log("wewe");
+            }}
+            className={styles.CreateNewBtn}
+          >
             Create a new resume
-          </button>
+          </span>
         </div>
 
         <div className={styles.TableList}>
